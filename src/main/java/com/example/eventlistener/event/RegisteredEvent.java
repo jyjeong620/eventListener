@@ -4,8 +4,12 @@ public class RegisteredEvent {
 
   private String name;
 
-  public RegisteredEvent(String name) {
+  private RegisteredEvent(String name) {
     this.name = name;
+  }
+
+  public static RegisteredEvent from(String name) {
+    return new RegisteredEvent(name);
   }
 
   public String getName() {
